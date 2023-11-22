@@ -1,21 +1,24 @@
 .Q1{
+    border: 2px solid;
     background-color: rgb(57, 18, 129);
     height:100px;
     width: 100px;
 }
 .c1{
-    
+    border: 2px solid;
     background-color: blue;
     height:100px;
     width: 100px;
     border-radius: 70%;
 }
 .Q2{
+    border: 2px solid;
     background-color: red;
     height:100px;
     width: 100px;
 }
 .Q3{
+    border: 2px solid;
     position: absolute;
     background-color: yellow;
     height:50px;
@@ -29,7 +32,7 @@
 }
 div{
     position: static;
-    margin: 10px
+    margin: 10px;
 }
 footer{
     position: fixed;
