@@ -1,0 +1,17 @@
+li[value] {
+    
+    font-size: small;
+    
+}
+li > a {
+    color: red;
+}
+.nots{
+    color: black;
+}
+#sulbahia{
+    color: greenyellow;
+}
+body{
+    text-align: center;
+}

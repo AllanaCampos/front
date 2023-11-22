@@ -1,0 +1,19 @@
+#caixa-externa{
+    background-color: darkmagenta;
+    padding: 2%;
+}
+.caixa{
+    background-color: blue;
+    padding: 1%;
+    &.caixa-interna{
+        background-color: red;
+        padding: 0%;
+    }
+}
+
+p{
+    color: yellow;
+}
+.texto-branco{
+    color:white;
+}
