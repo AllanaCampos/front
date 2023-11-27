@@ -1,0 +1,82 @@
+@media (min-width: 1201px) {
+    .container-destinos{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+    
+}
+@media (max-width: 1200px) {
+    .container-destinos{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+.roteiros-viagens{
+    background-color: lavender;
+    width: 1fr;
+    border-radius: 15px;
+    padding: 4%;
+}
+
+.roteiro-destino{
+    font-family: 'DM Serif Display', serif;
+    font-size: large;
+    color: rebeccapurple;
+    font-weight: bolder;
+}
+.roteiro-preco{
+    font-family: 'DM Serif Display', serif;
+    color: rebeccapurple;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.roteiro-obs{
+    color: rebeccapurple;
+    font-size: small;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0px;
+}
+.roteiro-parcelamento{
+    color: rebeccapurple;
+    font-size: small;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0px;
+}
+img{
+    height: 180px;
+    width: 285px;
+    border-radius: 15px;
+}
+ul{
+    font-family: 'Josefin Sans', sans-serif;
+    color: rebeccapurple;
+    list-style: none;
+    padding-left: 30%;
+    text-align: justify;
+
+}
+li::before{
+    content: '\2713';
+    font-weight: bolder;
+    padding-right: 10px;
+}
+button{
+    font-family: 'DM Serif Display', serif;
+    background-color: rgb(158, 245, 27);
+    color: white;
+    border-radius: 12px;
+    width: 80px;
+    height: 40px;
+    margin: 20px;
+    border: solid rgb(158, 245, 27);
+}
+
