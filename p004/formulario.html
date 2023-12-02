@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <legend>Roteiro</legend>
+            <p>
+                <label>Destino</label><br><br>
+                <input type="text" class="destino"/>
+            </p>
+            <p>
+                <label>Imagem</label><br><br>
+                <input type="url" class="imagem" placeholder="Digite a url da imagem"/>
+            </p>
+            <p>
+                <label>Incluso</label><br><br>
+                <label>Aéreo</label><br>
+                <input type="checkbox" id="ida" value="aereo">
+                <label>Ida</label><br>
+                <input type="checkbox" id="volta" value="aereo">
+                <label>Volta</label><br>
+            </p>
+            <p>
+                <label>Diárias</label>
+                <input type="number" id= "diaria" name="incluso" min="1" max="15">
+            </p>
+            <p>
+                <input type="checkbox" id= "cafe" name="incluso" value="cafe">
+                <label>Café da Manhã</label><br>
+            </p>
+            <p>
+                <label>Valor</label>
+                <input type="number" class="preco" min="1" max="15000">
+            </p>
+            <button type = "button" class = "submit">Enviar</button>
+        </form>
+    </div>
+    </hr>
+    <div class="container-destinos"></div>
+    <script> 
+        var botao = document.querySelector(".submit");
+        botao.addEventListener('click', adcElemento);
+        function adcElemento() {
+            var destino = document.querySelector(".destino").value;
+            var url = document.querySelector(".imagem").value;
+            var diarias = document.querySelector("#diaria").value;
+            var cafe = document.querySelector("#cafe");
+            var preco = document.querySelector(".preco").value;
+            var divNova = document.createElement("div");
+            divNova.setAttribute("class", "roteiros-viagens");
+            var img = document.createElement("img");
+            img.setAttribute("src", url);
+            divNova.appendChild(img);
+            var divDestino = document.createElement("div");
+            divDestino.setAttribute("class", "roteiro-destino");
+            var text = document.createTextNode(destino);
+            divDestino.appendChild(text);
+            divNova.appendChild(divDestino);
+            var lista = document.createElement("ul");
+            lista.setAttribute("class", "roteiro-incluso");
+            var ida = document.querySelector("#ida");
+            var volta = document.querySelector("#volta");
+            var idaVolta = "";
+            if(ida.checked){
+                if(volta.checked){
+                    idaVolta = "Aéreo ida e volta";
+                }
+                else idaVolta = "Aéreo ida";
+            }
+            else if(volta.checked){
+                    idaVolta = "Aéreo volta";
+                }
+            var textIV = document.createTextNode(idaVolta);
+            var p1 = document.createElement("li");
+            p1.appendChild(textIV);
+            var textD = document.createTextNode(diarias + " diárias");
+            var p2 = document.createElement("li");
+            p2.appendChild(textD);
+            var coffe = ""
+            if(cafe.checked){
+                coffe = "Café da Manhâ";
+            }
+            var textC = document.createTextNode(coffe);
+            var p3 = document.createElement("li");
+            p3.appendChild(textC);
+            lista.appendChild(p1);
+            lista.appendChild(p2);
+            lista.appendChild(p3);
+            divNova.appendChild(lista);
+            var divPreco = document.createElement("div");
+            divPreco.setAttribute("class", "roteiro-preco");
+            var textP = document.createTextNode("R$ " + preco + ",00");
+            divPreco.append(textP);
+            divNova.appendChild(divPreco);
+            var divObs = document.createElement("div");
+            divObs.setAttribute("class", "roteiro-obs");
+            var obs = document.createTextNode("Taxas Inclusas");
+            divObs.appendChild(obs);
+            divNova.appendChild(divObs);
+            var divParecelamento = document.createElement("div");
+            divParecelamento.setAttribute("class", "roteiro-parcelamento");
+            var parcelamento = document.createTextNode("Em até 10x sem Juros");
+            divParecelamento.appendChild(parcelamento);
+            divNova.appendChild(divParecelamento);
+            var b = document.createElement("button");
+            b.setAttribute("class", "roteiro-comprar");
+            var textB = document.createTextNode("Comprar");
+            b.appendChild(textB);
+            divNova.appendChild(b);
+            document.querySelector(".container-destinos").appendChild(divNova);
+            
+        }
+    </script>
+    
+</body>
+</html>

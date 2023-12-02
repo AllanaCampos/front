@@ -21,7 +21,6 @@
             <div class="roteiro-obs">Taxas Inclusas</div>
             <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
             <button class="roteiro-comprar">Comprar</button>
-          
         </div>
         <div class="roteiros-viagens">
             <img src="./assets/imgs/fortaleza.jpg">
@@ -35,7 +34,6 @@
             <div class="roteiro-obs">Taxas Inclusas</div>
             <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
             <button class="roteiro-comprar">Comprar</button>
-            
         </div>
         <div class="roteiros-viagens">
             <img src="./assets/imgs/campinas.jpg">
@@ -49,9 +47,40 @@
             <div class="roteiro-obs">Taxas Inclusas</div>
             <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
             <button class="roteiro-comprar">Comprar</button>
-           
         </div>
-        
     </div>
+    <script>
+        const botoes = document.querySelectorAll(".roteiro-comprar");
+        const destinos = document.querySelectorAll(".roteiro-destino");
+        const inclusos = document.getElementsByClassName("roteiro-incluso");
+        const precos = document.getElementsByClassName("roteiro-preco");
+        const observacoes = document.getElementsByClassName("roteiro-obs");
+        const parcelamentos = document.getElementsByClassName("roteiro-parcelamento");
+
+        for(var i = 0; i < botoes.length; i++){
+            var botao = botoes[i];
+            var destino = destinos[i];
+            var incluso = inclusos[i];
+            var preco = precos[i];
+            var obs = observacoes[i];
+            var parcelamento = parcelamentos[i];
+            botao.addEventListener('click', function(){
+                capture(destino, incluso, preco, obs, parcelamento);
+            });
+        }
+        function capture(destino, incluso, preco, obs, parcelamento){
+            var objJson = {
+                "Destino" : destino.innerText,
+                "Incluso" : [incluso.innerText.split("\n")[0], incluso.innerText.split("\n")[1], incluso.innerText.split("\n")[2]],
+                "Preço" : preco.innerText,
+                "Observação" : obs.innerText,
+                "Parcelamento" : parcelamento.innerText
+            }
+            var obj = JSON.stringify(objJson);
+            console.log(JSON.parse(obj));
+        }
+        
+
+    </script>
 </body>
 </html>
