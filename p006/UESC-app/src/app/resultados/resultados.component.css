@@ -1,0 +1,25 @@
+@media (min-width:500px){
+    #resultados{
+        grid-row-start:2;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+}
+
+@media (max-width:500px){
+    #resultados{
+        grid-row-start:5;
+        grid-column-start: 2;
+        grid-column-end: 1;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+}
+header{
+    text-align: center;
+    background-color: lightgrey;
+    margin-bottom: 20px;
+    font-family:'Times New Roman', Times, serif;
+}

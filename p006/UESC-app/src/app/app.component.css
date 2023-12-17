@@ -1,0 +1,23 @@
+@media (min-width:500px){
+    div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 20%;
+        grid-template-rows: max-content;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width:500px){
+    div{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        gap: 5px;
+    }
+}
