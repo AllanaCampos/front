@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PaisesService } from './paises.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,5 @@ import { PaisesService } from './paises.service';
 })
 export class AppComponent {
   title = 'meuApp';
-  paises:any;
-  constructor(private paisesService: PaisesService){ }
-
-  ngOnInit(){
-    this.paises = this.paisesService.paises;
-  }
+  
 }
