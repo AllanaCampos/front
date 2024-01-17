@@ -1,0 +1,8 @@
+<p>lista works!</p>
+<h1>{{frase}}</h1>
+
+<input #novaTarefa type="text">
+<button (click) = "addTarefa(novaTarefa.value)">Adiciona Tarefa</button>
+<div *ngFor="let tarefa of listaTarefas_listaTarefasComponent">
+    <app-tarefas [itemTarefa]="tarefa"></app-tarefas>
+</div>
