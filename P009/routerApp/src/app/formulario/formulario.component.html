@@ -1,0 +1,35 @@
+<div class="form">
+    <form>
+        <legend>Roteiro</legend>
+        <p>
+            <label>Destino</label><br><br>
+            <input type="text" class="destino"/>
+        </p>
+        <p>
+            <label>Imagem</label><br><br>
+            <input type="url" class="imagem" placeholder="Digite a url da imagem"/>
+        </p>
+        <p>
+            <label>Incluso</label><br><br>
+            <label>Aéreo</label><br>
+            <input type="checkbox" id="ida" value="aereo">
+            <label>Ida</label><br>
+            <input type="checkbox" id="volta" value="aereo">
+            <label>Volta</label><br>
+        </p>
+        <p>
+            <label>Diárias</label>
+            <input type="number" id= "diaria" name="incluso" min="1" max="15">
+        </p>
+        <p>
+            <input type="checkbox" id= "cafe" name="incluso" value="cafe">
+            <label>Café da Manhã</label><br>
+        </p>
+        <p>
+            <label>Valor</label>
+            <input type="number" class="preco" min="1" max="15000">
+        </p>
+        <button (click) = "adcElemento()" type = "button" class = "submit">Enviar</button>
+    </form>
+</div>
+<div class="container-destinos"></div>
